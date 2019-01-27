@@ -61,7 +61,7 @@ public class WaveSpawner : MonoBehaviour {
     bool IsEnemyAlive()
     {
 
-        searchCountdown -= timeBetweenWaves.deltaTime;
+        searchCountdown -= timeBetweenWaves;//.deltaTime;
 
         if (searchCountdown <= 0) {
             searchCountdown = 1f;
