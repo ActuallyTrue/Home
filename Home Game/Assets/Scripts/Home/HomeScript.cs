@@ -17,7 +17,6 @@ public class HomeScript : MonoBehaviour {
     private void Start()
     {
         CurrentHome = gameObject;
-        border.SetActive(false);
 
     }
 
@@ -31,11 +30,11 @@ public class HomeScript : MonoBehaviour {
 
         HomeHealth -= damage;
 
-        if (HomeHealth < 10000 && HomeHealth >= 5000)
+        if (HomeHealth < 800 && HomeHealth >= 400)
         {
             CurrentHome.transform.localScale = new Vector2(6.34593f, 6.34593f);
         }
-        if (HomeHealth < 5000 && HomeHealth > 0)
+        if (HomeHealth < 400 && HomeHealth > 0)
         {
             CurrentHome.transform.localScale = new Vector2(4.180178f, 4.180178f);
         }
@@ -62,7 +61,7 @@ public class HomeScript : MonoBehaviour {
     IEnumerator Delay(){
 
         paused = true;
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(1.5f);
         paused = false;
     }
 }

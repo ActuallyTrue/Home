@@ -5,8 +5,14 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
 
     public int health = 100;
+    public PlayerController Player;
 
 
+
+    private void Start()
+    {
+
+    }
 
     public void TakeDamage(int damage)
     {
@@ -15,7 +21,9 @@ public class PlayerHealth : MonoBehaviour {
 
         if (health <= 0)
         {
+            Player.Die();
             KillPlayer();
+            
         }
 
     }
@@ -31,4 +39,5 @@ public class PlayerHealth : MonoBehaviour {
         Destroy(gameObject);
 
     }
+
 }
