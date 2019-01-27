@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour {
 
         aimAngle = Mathf.Atan2(aimDirection.x, aimDirection.y) * Mathf.Rad2Deg;
 
-        Debug.Log(aimDirection + " " + aimAngle, gameObject);
 
         if (aimDirection.x != 0 && aimDirection.y != 0)
         {
